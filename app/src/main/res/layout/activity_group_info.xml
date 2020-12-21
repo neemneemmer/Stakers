@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mg_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorLightGrey"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/MG_backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/printable4u_bold"
+            android:gravity="center"
+            android:text="@string/group_info"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/action_bar_font"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/MG_backBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/MG_moreBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/mg_action_bar"
+        tools:layout_editor_absoluteX="86dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/group_coverInfo"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/colorBlack"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/isMasterInfo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/trans_white_bg"
+                android:padding="8dp"
+                android:src="@drawable/crown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/isMemberInfo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/trans_white_bg"
+                android:padding="8dp"
+                android:src="@drawable/member"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/isPendingInfo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/trans_white_bg"
+                android:padding="8dp"
+                android:src="@drawable/pending"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/isFullTV"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/trans_white_bg"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="เต็ม"
+                android:textColor="@color/colorWhite"
+                android:textSize="23dp"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/colorGrey"
+                app:layout_constraintTop_toBottomOf="@+id/group_coverInfo">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/time"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/groupTimestampTextInfo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/groupTimestampTextInfo"
+                    android:layout_width="110dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:gravity="center_vertical"
+                    android:text="dd-MM-yyyy hh:mm:ss"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/group_nameInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center_vertical"
+                android:text="ชื่อกลุ่ม"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+            <TextView
+                android:id="@+id/group_nameTextInfo"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/printable4u_bold"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="aaaaaaaaaaaaaaaaa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_nameInfo" />
+
+            <ImageView
+                android:id="@+id/group_DescriptionIconInfo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/announce"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_nameTextInfo" />
+
+            <TextView
+                android:id="@+id/group_DescriptionTVInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center_vertical"
+                android:text="รายละเอียด"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/group_DescriptionIconInfo"
+                app:layout_constraintTop_toBottomOf="@+id/group_nameTextInfo" />
+
+            <TextView
+                android:id="@+id/group_DescriptionTextInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/round_grey_btn"
+                android:ellipsize="end"
+                android:fontFamily="@font/printable4u_regular"
+                android:lineHeight="25dp"
+                android:lines="5"
+                android:padding="10dp"
+                android:text="aaaaaaaaaaaaaa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_DescriptionIconInfo" />
+
+            <TextView
+                android:id="@+id/group_typeTVInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center_vertical"
+                android:text="Streaming type"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/group_packageTVInfo"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_DescriptionTextInfo" />
+
+            <TextView
+                android:id="@+id/group_packageTVInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="70dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center_vertical"
+                android:text="Package"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/group_typeTVInfo"
+                app:layout_constraintTop_toBottomOf="@+id/group_DescriptionTextInfo" />
+
+            <TextView
+                android:id="@+id/group_typeTextInfo"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:background="@drawable/round_grey_btn"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center_vertical"
+                android:text="aaaaaa"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/group_packageTextInfo"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_typeTVInfo" />
+
+            <TextView
+                android:id="@+id/group_packageTextInfo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:background="@drawable/round_grey_btn"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center_vertical"
+                android:text="aaaaaaaaaaa"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/group_typeTextInfo"
+                app:layout_constraintTop_toBottomOf="@+id/group_packageTVInfo" />
+
+            <TextView
+                android:id="@+id/group_ownerTVInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center_vertical"
+                android:text="Stake master"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/group_sizeTVInfo"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_typeTextInfo" />
+
+            <TextView
+                android:id="@+id/group_sizeTVInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center_vertical"
+                android:text="Staker(s)"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/group_ownerTVInfo"
+                app:layout_constraintTop_toBottomOf="@+id/group_packageTextInfo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/group_OwnerLayoutInfo"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/round_grey_btn"
+                android:paddingStart="10dp"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_ownerTVInfo">
+
+                <ImageView
+                    android:id="@+id/master_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/crown"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/master_profile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/regis_user"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/master_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/group_ownerTextInfo"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:padding="5dp"
+                    android:background="@drawable/round_grey_btn"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:gravity="center_vertical"
+                    android:text="aaaaaa"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:lines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/master_profile"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/group_MemberLayoutInfo"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/round_grey_btn"
+                android:paddingStart="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/group_OwnerLayoutInfo"
+                app:layout_constraintTop_toBottomOf="@+id/group_sizeTVInfo">
+
+                <ImageView
+                    android:id="@+id/staker_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/member"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/staker_current_memberInfo"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_grey_btn"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:gravity="end"
+                    android:padding="5dp"
+                    android:text="0/"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/staker_max_memberInfo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/staker_max_memberInfo"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/round_grey_btn"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="0"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/group_priceTVInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="center_vertical"
+                android:text="ราคาเฉลี่ย ณ ปัจจุบัน"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_OwnerLayoutInfo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/group_PriceLayoutInfo"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/round_grey_btn"
+                android:paddingStart="10dp"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_priceTVInfo">
+
+                <ImageView
+                    android:id="@+id/price_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/baht"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/group_priceTextInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/round_grey_btn"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="aaaaaa"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/group_priceBahtInfo"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/group_priceBahtInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/round_grey_btn"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="บาท"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/group_img1"
+                android:layout_width="@dimen/extra_img"
+                android:layout_height="@dimen/extra_img"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/stk_logo_colored"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/group_img2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_PriceLayoutInfo" />
+
+            <ImageView
+                android:id="@+id/group_img2"
+                android:layout_width="@dimen/extra_img"
+                android:layout_height="@dimen/extra_img"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/stk_logo_colored"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/group_img3"
+                app:layout_constraintStart_toEndOf="@+id/group_img1"
+                app:layout_constraintTop_toBottomOf="@+id/group_PriceLayoutInfo" />
+
+            <ImageView
+                android:id="@+id/group_img3"
+                android:layout_width="@dimen/extra_img"
+                android:layout_height="@dimen/extra_img"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/stk_logo_colored"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/group_img2"
+                app:layout_constraintTop_toBottomOf="@+id/group_PriceLayoutInfo" />
+
+            <Space
+                android:id="@+id/space1Info"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_img1" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/submitRequestLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey"
+                app:layout_constraintTop_toBottomOf="@+id/space1Info">
+
+                <Button
+                    android:id="@+id/submitRequestBtn"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/dark_btn"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:paddingHorizontal="40dp"
+                    android:text="ขอเข้าร่วม"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Space
+                    android:id="@+id/space2Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/submitRequestBtn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cancelRequestLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey"
+                app:layout_constraintTop_toBottomOf="@+id/space1Info">
+
+                <Button
+                    android:id="@+id/cancelRequestBtn"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/dark_pink_btn"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:paddingHorizontal="40dp"
+                    android:text="ยกเลิก"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Space
+                    android:id="@+id/space_cancel2Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cancelRequestBtn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/memberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey"
+                app:layout_constraintTop_toBottomOf="@+id/space1Info">
+
+                <Button
+                    android:id="@+id/memberBtn"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/dark_btn"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:paddingHorizontal="40dp"
+                    android:text="สมาชิกกลุ่ม"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/manageMemberBtn"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/dark_btn"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:paddingHorizontal="40dp"
+                    android:text="คำขอเข้ากลุ่ม"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/memberBtn" />
+
+                <Space
+                    android:id="@+id/space_member2Info"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/manageMemberBtn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Space
+                android:id="@+id/space3Info"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submitRequestLayout" />
+
+            <Space
+                android:id="@+id/space4Info"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cancelRequestLayout" />
+
+            <Space
+                android:id="@+id/space5Info"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/memberLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/gInfoLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/gInfoProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateDrawable="@drawable/progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gInfoProgressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/printable4u_bold"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Please wait..."
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

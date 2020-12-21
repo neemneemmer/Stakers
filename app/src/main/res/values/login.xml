@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_logo_size">130dp</dimen>
+    <dimen name="login_margin_top">40dp</dimen>
+    <dimen name="login_margin">15dp</dimen>
+    <dimen name="login_margin_et_horizontal">40dp</dimen>
+    <dimen name="login_logo_text_size">50sp</dimen>
+    <dimen name="login_text_size">23sp</dimen>
+    <dimen name="login_text_size_2">20sp</dimen>
+    <dimen name="login_et_height">50dp</dimen>
+
+    <string name="email">อีเมล</string>
+    <string name="password">รหัสผ่าน</string>
+    <string name="login">เข้าสู่ระบบ</string>
+    <string name="forget_password">ลืมรหัสผ่าน?</string>
+    <string name="register">สมัครสมาชิกใหม่</string>
+    <string name="email_error">กรุณาใส่อีเมล</string>
+    <string name="password_error">กรุณาใส่รหัสผ่าน</string>
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--This String in create group-->
+    <string name="choose_app">เลือก Streaming app ที่ท่านต้องการ</string>
+    <string name="choose_package">เลือกแพ็คเก็จที่ท่านต้องการ</string>
+    <string name="choose_member">จำนวนสมาชิกสูงสุด</string>
+    <string name="avg_price">(ราคาเฉลี่ย/คน)</string>
+    <string name="base_price">บาท</string>
+    <string name="group_name">ตั้งชื่อกลุ่ม</string>
+    <string name="group_des">รายละเอียดของกลุ่ม</string>
+    <string name="group_des_example">ตัวอย่างเช่น รายละเอียดการนัดหมาย ข้อมูลการติดต่อ หรือข้อตกลงของกลุ่ม</string>
+    <string name="group_cover">รูปภาพหน้าปก</string>
+    <string name="group_cover_btn">เพิ่มรูปภาพหน้าปก</string>
+    <string name="group_cover_preview">รูปภาพหน้าปกตัวอย่าง</string>
+    <string name="extra_img">รูปภาพเพิ่มเติม (สูงสุด 3 รูป)</string>
+
+    <!-- Type -->
+    <string-array name="streaming_type">
+        <item>Netflix</item>
+        <item>Viu</item>
+        <item>iflix</item>
+        <item>Apple Music</item>
+        <item>Spotify</item>
+        <item>Youtube</item>
+    </string-array>
+
+    <!-- Netflix -->
+    <string-array name="netflix">
+        <item>HD(up to 720p) สูงสุด: 2 ท่าน</item>
+        <item>Ultra HD(up to 4K) สูงสุด: 4 ท่าน</item>
+    </string-array>
+
+    <!-- Viu -->
+    <string-array name="viu">
+        <item>Full HD(up to 1080p) สูงสุด: 4 ท่าน</item>
+    </string-array>
+
+    <!-- iflix -->
+    <string-array name="iflix">
+        <item>HD(up to 720p) สูงสุด: 5 ท่าน</item>
+    </string-array>
+
+    <!-- Apple Music -->
+    <string-array name="apple">
+        <item>Family pack สูงสุด: 6 ท่าน</item>
+    </string-array>
+
+    <!-- Spotify -->
+    <string-array name="spotify">
+        <item>Family pack สูงสุด: 6 ท่าน</item>
+    </string-array>
+
+    <!-- Youtube -->
+    <string-array name="youtube">
+        <item>Family pack สูงสุด: 6 ท่าน</item>
+    </string-array>
+
+    <!-- Members -->
+    <string-array name="twomembers">
+        <item>2</item>
+    </string-array>
+    <string-array name="fourmembers">
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="fivemembers">
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="sixmembers">
+        <item>6</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+    </string-array>
+
+    <!-- Price -->
+    <string name="netflix_2">349</string>
+    <string name="netflix_4">419</string>
+    <string name="viu_4">119</string>
+    <string name="iflix_5">100</string>
+    <string name="apple_6">199</string>
+    <string name="spotify_6">199</string>
+    <string name="youtube_6">259</string>
+
+    <!-- Dimension in create group -->
+    <dimen name="margin_vertical">15dp</dimen>
+    <dimen name="margin_horizontal">10dp</dimen>
+    <dimen name="spn_padding">5dp</dimen>
+    <dimen name="cover_height">50dp</dimen>
+    <dimen name="icon_height">25dp</dimen>
+    <dimen name="extra_img">90dp</dimen>
+    <dimen name="spn_height">40dp</dimen>
+
+</resources>

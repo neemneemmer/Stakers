@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ld_gradient2"
+    tools:context=".CreateGroupActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorLightGrey"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/printable4u_bold"
+            android:gravity="center"
+            android:text="@string/create_group"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/action_bar_font"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/backBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/streaming_typeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/choose_app"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stm_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/spinner_round_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/streaming_typeTV" >
+
+                <Spinner
+                    android:id="@+id/streaming_typeSpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spn_height"
+                    android:fontFamily="@font/printable4u_bold"
+                    android:paddingHorizontal="@dimen/spn_padding"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_group_font"
+                    android:textAlignment="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/streaming_desTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/choose_package"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stm_type_layout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stm_des_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/spinner_round_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/streaming_desTV">
+
+                <Spinner
+                    android:id="@+id/streaming_desSpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spn_height"
+                    android:fontFamily="@font/printable4u_bold"
+                    android:paddingHorizontal="@dimen/spn_padding"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_group_font"
+                    android:textAlignment="textStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/streaming_memTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/choose_member"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stm_des_layout" />
+
+            <TextView
+                android:id="@+id/streaming_priceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/avg_price"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stm_des_layout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stm_mem_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/spinner_round_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/streaming_memTV">
+
+                <Spinner
+                    android:id="@+id/streaming_memSpn"
+                    android:layout_width="145dp"
+                    android:layout_height="@dimen/spn_height"
+                    android:fontFamily="@font/printable4u_bold"
+                    android:paddingHorizontal="@dimen/spn_padding"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_group_font"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/stm_price_layout"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/tv_round_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/streaming_priceTV">
+
+                <TextView
+                    android:id="@+id/streaming_showPriceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/spn_height"
+                    android:fontFamily="@font/printable4u_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/spn_padding"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="0"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_group_font"
+                    app:layout_constraintEnd_toStartOf="@+id/streaming_bahtTV"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/streaming_bahtTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/spn_height"
+                    android:fontFamily="@font/printable4u_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/spn_padding"
+                    android:paddingEnd="15dp"
+                    android:text="@string/base_price"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_group_font"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/stm_mem_layout"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <TextView
+                android:id="@+id/group_nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/group_name"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space2" />
+
+            <EditText
+                android:id="@+id/group_nameET"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorWhite"
+                android:fontFamily="@font/printable4u_regular"
+                android:inputType="text"
+                android:textSize="@dimen/search_bar_font"
+                app:layout_constraintTop_toBottomOf="@+id/group_nameTV"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <TextView
+                android:id="@+id/group_desTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/group_des"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_nameET" />
+
+            <EditText
+                android:id="@+id/group_desET"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/spinner_round_btn"
+                android:fontFamily="@font/printable4u_regular"
+                android:gravity="top|left"
+                android:inputType="textMultiLine"
+                android:lineHeight="30dp"
+                android:lines="4"
+                android:padding="10dp"
+                android:hint="@string/group_des_example"
+                android:textColorHint="#A8A8A8"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/search_bar_font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_desTV"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/group_coverTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/group_cover"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_desET" />
+
+            <LinearLayout
+                android:id="@+id/group_coverBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spn_height"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/spinner_round_btn"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/group_coverTV">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_height"
+                    android:layout_height="@dimen/icon_height"
+                    android:src="@drawable/add_pic_trans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:layout_marginHorizontal="@dimen/margin_horizontal"
+                    android:layout_marginVertical="@dimen/margin_vertical"
+                    android:fontFamily="@font/printable4u_bold"
+                    android:text="@string/group_cover_btn"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/create_group_font" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/group_imgPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/group_cover_preview"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_coverBtn" />
+
+            <ImageView
+                android:id="@+id/group_coverIV"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:scaleType="centerCrop"
+                android:background="@color/colorBlack"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_imgPreview" />
+
+            <TextView
+                android:id="@+id/group_imgTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/extra_img"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_coverIV" />
+
+            <ImageView
+                android:id="@+id/group_img1"
+                android:layout_width="@dimen/extra_img"
+                android:layout_height="@dimen/extra_img"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/add_pic"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/group_img2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_imgTV" />
+
+            <ImageView
+                android:id="@+id/group_img2"
+                android:layout_width="@dimen/extra_img"
+                android:layout_height="@dimen/extra_img"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/add_pic"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/group_img3"
+                app:layout_constraintStart_toEndOf="@+id/group_img1"
+                app:layout_constraintTop_toBottomOf="@+id/group_imgTV" />
+
+            <ImageView
+                android:id="@+id/group_img3"
+                android:layout_width="@dimen/extra_img"
+                android:layout_height="@dimen/extra_img"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:background="@drawable/add_pic"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/group_img2"
+                app:layout_constraintTop_toBottomOf="@+id/group_imgTV" />
+
+            <Button
+                android:id="@+id/createSTKGroupBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="50dp"
+                android:background="@drawable/dark_btn"
+                android:fontFamily="@font/printable4u_regular"
+                android:paddingHorizontal="50dp"
+                android:paddingVertical="5dp"
+                android:text="@string/create_group"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/create_group_font"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/group_img2" />
+
+            <Space
+                android:id="@+id/space3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/createSTKGroupBtn"
+                tools:layout_editor_absoluteX="10dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorWhite"
+        android:id="@+id/relLoading"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/progressBar_cyclic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateDrawable="@drawable/progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/progressTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/printable4u_bold"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Please wait..."
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

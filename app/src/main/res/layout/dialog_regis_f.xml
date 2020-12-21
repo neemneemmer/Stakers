@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/red_border_btn">
+
+    <ImageView
+        android:id="@+id/checkedIV"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginVertical="15dp"
+        android:src="@drawable/info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+        android:layout_marginVertical="@dimen/regis_margin_vertical"
+        android:fontFamily="@font/printable4u_bold"
+        android:text="การยอมรับเงื่อนไข"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorDarkPink"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@+id/checkedIV" />
+
+    <TextView
+        android:id="@+id/contextTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+        android:layout_marginVertical="@dimen/regis_margin_vertical"
+        android:fontFamily="@font/printable4u_regular"
+        android:text="กรุณายอมรับเงื่อนไขการใช้บริการ"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="23sp"
+        app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+    <Button
+        android:id="@+id/dismissBtn"
+        android:layout_width="@dimen/regis_button_width"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/regis_margin_vertical"
+        android:background="@drawable/red_border_btn"
+        android:fontFamily="@font/printable4u_bold"
+        android:paddingHorizontal="40dp"
+        android:text="ปิด"
+        android:textColor="@color/colorDarkPink"
+        android:textSize="@dimen/login_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contextTV" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/dismissBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

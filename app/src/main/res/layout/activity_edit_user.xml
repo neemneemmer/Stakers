@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUserActivity">
+
+    <ScrollView
+        android:id="@+id/regisSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/regis_padding_horizontal"
+            android:paddingVertical="@dimen/regis_padding_vertical">
+
+            <Button
+                android:id="@+id/back_bnt"
+                android:layout_width="@dimen/regis_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginStart="71dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/white_border_btn"
+                android:fontFamily="@font/printable4u_bold"
+                android:paddingHorizontal="40dp"
+                android:text="@string/cancel_btn"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/login_text_size"
+                app:layout_constraintEnd_toStartOf="@+id/submit_bnt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space2" />
+
+            <Button
+                android:id="@+id/submit_bnt"
+                android:layout_width="@dimen/regis_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="71dp"
+                android:background="@drawable/login_round_btn"
+                android:fontFamily="@font/printable4u_bold"
+                android:paddingHorizontal="40dp"
+                android:text="@string/submit_btn"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/login_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/back_bnt"
+                app:layout_constraintTop_toBottomOf="@+id/space2" />
+
+            <EditText
+                android:id="@+id/rDOBET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:focusable="false"
+                android:fontFamily="@font/printable4u_regular"
+                android:inputType="date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/regis_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rDOBTV" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rGenderTV">
+
+                <RadioButton
+                    android:id="@+id/male_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:text="@string/r_male"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/regis_text_size" />
+
+                <RadioButton
+                    android:id="@+id/female_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:text="@string/r_female"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/regis_text_size" />
+
+                <RadioButton
+                    android:id="@+id/no_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/printable4u_regular"
+                    android:text="@string/r_no_gender"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/regis_text_size" />
+            </RadioGroup>
+
+            <Space
+                android:id="@+id/space1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/regis_space_height1"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/regis_space_height1"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Space
+                android:id="@+id/space3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/regis_space_height2"
+                app:layout_constraintTop_toBottomOf="@+id/back_bnt"
+                tools:layout_editor_absoluteX="10dp" />
+
+            <TextView
+                android:id="@+id/imageErrorTV"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/printable4u_regular"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/regis_image_edit_text_size"
+                app:layout_constraintStart_toEndOf="@+id/user_img"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <TextView
+                android:id="@+id/imageEditTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_regular"
+                android:text="@string/edit_user_image"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/regis_image_edit_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_img" />
+
+            <TextView
+                android:id="@+id/rEmailTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/r_email"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/regis_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageEditTV" />
+
+            <EditText
+                android:id="@+id/rEmailET"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/regis_et_height"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:autofillHints=""
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:fontFamily="@font/printable4u_regular"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/regis_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rEmailTV" />
+
+            <TextView
+                android:id="@+id/rDOBTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/r_dob"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/regis_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rEmailET" />
+
+            <TextView
+                android:id="@+id/rGenderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/r_gender"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/regis_text_size"
+                app:layout_constraintEnd_toStartOf="@+id/rGenderErrTV"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rDOBET" />
+
+            <TextView
+                android:id="@+id/rGenderErrTV"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_regular"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/regis_image_edit_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rGenderTV"
+                app:layout_constraintTop_toBottomOf="@+id/rDOBET" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/tv_2"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/regis_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space1" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/user_img"
+                android:layout_width="@dimen/regis_user_image"
+                android:layout_height="@dimen/regis_user_image"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:adjustViewBounds="true"
+                android:background="@drawable/regis_user"
+                android:scaleType="centerCrop"
+                app:civ_border_color_direction="top_to_bottom"
+                app:civ_border_color_end="@color/colorPrimaryDark"
+                app:civ_border_color_start="@color/colorPrimary"
+                app:civ_border_width="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorWhite"
+        android:id="@+id/recLoading"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/progressBar_registerCheck"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateDrawable="@drawable/progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

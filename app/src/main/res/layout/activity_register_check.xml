@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ld_gradient2"
+    tools:context=".RegisterCheckActivity">
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="@dimen/back_icon_size"
+        android:layout_height="@dimen/back_icon_size"
+        android:layout_marginStart="@dimen/margin_icon_size"
+        android:layout_marginTop="@dimen/margin_icon_size"
+        android:src="@drawable/back_btn_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/backTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="@dimen/margin_icon_size"
+        android:fontFamily="@font/printable4u_bold"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/rc_button_text_size"
+        android:text="@string/rc_back"
+        app:layout_constraintStart_toEndOf="@+id/backBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/backBtn" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/streaming_typeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_horizontal"
+                android:layout_marginVertical="@dimen/margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/rc_tv1"
+                android:textAlignment="center"
+                android:textColor="@color/colorYellow"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/userIV"
+                android:layout_width="@dimen/regis_user_image"
+                android:layout_height="@dimen/regis_user_image"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                app:civ_border_width="5dp"
+                app:civ_border_color="@color/colorYellow"
+                android:background="@drawable/regis_user"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/streaming_typeTV"/>
+
+            <TextView
+                android:id="@+id/rcEmailTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/r_email"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/rc_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userIV" />
+
+            <TextView
+                android:id="@+id/rcEmailText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rc_button_text_height"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:paddingStart="@dimen/rc_padding_start"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/rc_text_size"
+                android:background="@drawable/trans_white_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcEmailTV" />
+
+            <TextView
+                android:id="@+id/rcPasswordTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/rc_password"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/rc_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcEmailText" />
+
+            <TextView
+                android:id="@+id/rcPasswordText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rc_button_text_height"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:paddingStart="@dimen/rc_padding_start"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/rc_text_size"
+                android:background="@drawable/trans_white_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcPasswordTV" />
+
+            <TextView
+                android:id="@+id/rcDoBTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/rc_dob"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/rc_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcPasswordText" />
+
+            <TextView
+                android:id="@+id/rcDobText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rc_button_text_height"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:paddingStart="@dimen/rc_padding_start"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/rc_text_size"
+                android:background="@drawable/trans_white_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcDoBTV" />
+
+            <TextView
+                android:id="@+id/rcGenderTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:text="@string/rc_gender"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/rc_text_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcDobText" />
+
+            <TextView
+                android:id="@+id/rcGenderText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rc_button_text_height"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:paddingStart="@dimen/rc_padding_start"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/printable4u_bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/rc_text_size"
+                android:background="@drawable/trans_white_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcGenderTV" />
+            
+            <CheckBox
+                android:id="@+id/termChoice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:buttonTint="@color/colorWhite"
+                android:fontFamily="@font/printable4u_bold"
+                android:textColor="@color/colorYellow"
+                android:textSize="25sp"
+                android:text="@string/rc_term"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rcGenderText" />
+
+            <Space
+                android:id="@+id/space1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/regis_space_height1"
+                app:layout_constraintTop_toBottomOf="@+id/termChoice" />
+
+            <Button
+                android:id="@+id/rRegisBtn"
+                android:layout_width="@dimen/regis_button_width"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/regis_margin_et_horizontal"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                android:background="@drawable/white_border_btn"
+                android:fontFamily="@font/printable4u_bold"
+                android:paddingHorizontal="40dp"
+                android:text="@string/rc_regis_btn"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/login_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space1" />
+
+            <Space
+                android:id="@+id/space3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/regis_space_height2"
+                android:layout_marginVertical="@dimen/regis_margin_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/rRegisBtn" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorWhite"
+        android:id="@+id/recLoading"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/progressBar_registerCheck"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateDrawable="@drawable/progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_font">60sp</dimen>
+    <dimen name="search_bar_font">20sp</dimen>
+    <dimen name="action_bar_font">30sp</dimen>
+    <dimen name="button_font">20sp</dimen>
+
+    <dimen name="create_group_font">23sp</dimen>
+
+    <dimen name="menu_font">18sp</dimen>
+    <dimen name="menu_icon_width">30dp</dimen>
+    <dimen name="menu_icon_height">30dp</dimen>
+    <dimen name="menu_padding_top">10dp</dimen>
+    <dimen name="menu_padding_horizontal">10dp</dimen>
+    <dimen name="menu_padding_bottom">5dp</dimen>
+
+    <dimen name="progress_size">200dp</dimen>
+
+    <!-- card view -->
+    <dimen name="image_height">150dp</dimen>
+
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/userImg_single_not_confirm"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginVertical="@dimen/regis_margin_vertical"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="21dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/regis_user"
+        android:scaleType="centerCrop"
+        app:civ_border_color_direction="top_to_bottom"
+        app:civ_border_color_end="@color/colorPrimaryDark"
+        app:civ_border_color_start="@color/colorPrimary"
+        app:civ_border_width="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/showtextv1_single_not_confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/showtextv1_single_not_confirm"
+        android:layout_width="246dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/printable4u_regular"
+        android:text="ขอเข้าร่วมกลุ่มของคุณได้รับการอนุมัติแล้ว"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmTv_single_not_confirm" />
+
+    <TextView
+        android:id="@+id/showtextTv2_single_not_confirm"
+        android:layout_width="31dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="21dp"
+        android:fontFamily="@font/printable4u_regular"
+        android:text="กลุ่ม"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/userImg_single_not_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/showtextv1_single_not_confirm" />
+
+    <TextView
+        android:id="@+id/confirmTv_single_not_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/printable4u_bold"
+        android:text="การอนุมัติ"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/userImg_single_not_confirm"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateTv_single_not_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/printable4u_regular"
+        android:text="14/09/20 12:33"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/confirmTv_single_not_confirm"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/NameGroupTv_single_not_confirm"
+        android:layout_width="202dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/printable4u_regular"
+        android:text="NameGroup"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/showtextTv2_single_not_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/showtextv1_single_not_confirm" />
+
+    <Button
+        android:id="@+id/gotogroupbnt_single_not_confirm"
+        android:layout_width="137dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="202dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/white_border_btn_thin"
+        android:fontFamily="@font/printable4u_regular"
+        android:text="ไปที่กลุ่ม"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NameGroupTv_single_not_confirm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

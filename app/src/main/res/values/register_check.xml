@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="back_icon_size">30dp</dimen>
+    <dimen name="margin_icon_size">20dp</dimen>
+    <dimen name="rc_text_size">23sp</dimen>
+    <dimen name="rc_button_text_size">20sp</dimen>
+    <dimen name="rc_button_text_height">40dp</dimen>
+    <dimen name="rc_padding_start">15dp</dimen>
+
+    <string name="rc_back">ย้อนกลับเพื่อแก้ไข</string>
+    <string name="rc_tv1">โปรดตรวจสอบข้อมูลของท่านอีกครั้ง</string>
+    <string name="rc_email">อีเมล</string>
+    <string name="rc_username">ชื่อผู้ใช้งาน</string>
+    <string name="rc_password">รหัสผ่าน</string>
+    <string name="rc_dob">วันเกิด (ว/ด/ป)</string>
+    <string name="rc_gender">เพศ</string>
+    <string name="rc_regis_btn">สมัคร</string>
+    <string name="rc_term">ข้าพเจ้ายอมรับในเงื่อนไขและข้อตกลง</string>
+</resources>
